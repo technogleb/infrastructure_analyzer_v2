@@ -1,5 +1,0 @@
-import requests
-from urllib.parse import urlencode
-
-from ianapp.config import URL, USERAGENT_COOKIE, prepare_params
-
