@@ -33,4 +33,5 @@ def get_realty_data_obj():
         tmp = s.send(request)
         responses[square] = tmp
         sleep(7)
+        print(f'{square}: {tmp} is ready')
     return responses
