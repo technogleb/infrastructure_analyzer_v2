@@ -8,7 +8,7 @@ class Realty(Base):
     __tablename__ = 'realty'
 
     id = Column(Integer, primary_key=True)
-    cian_id = Column(String, nullable=False)
+    cian_id = Column(Integer, nullable=False)
     cian_price = Column(Integer, nullable=False)
     cian_lon = Column(String, nullable=False)
     cian_lat = Column(String, nullable=False)
