@@ -14,14 +14,17 @@ def get_dataset_size():
     # Копирует ключи справочника DATASETS в виде списка
     datasets = list(DATASETS.keys())
 
+    headers = {
+        'User-Agent': USERAGENT_COOKIE,
+    }
     params = {
         "api_key": DATA_MOS_API_KEY,
     }
     for set_id in datasets:
         url = f'https://apidata.mos.ru/v1/datasets/{set_id}'
-        tmp = requests.get(url, params=params).json()
-        tmp.headers['User-agent'] = USERAGENT_COOKIE
+        tmp = requests.get(url, params=params, headers=headers).json()
         DATASETS[set_id]['items_count'] = tmp['ItemsCount']
+
 
 if __name__ == '__main__':
     get_dataset_size()
