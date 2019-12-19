@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine
 
 from ianapp.config import SQLALCHEMY_DATABASE_URI
-from ianapp.realty.models import Base
+from ianapp.infrastructure.models import Base1
+from ianapp.realty.models import Base2
 
 
 # The echo flag is a shortcut to setting up SQLAlchemy logging, which is accomplished via Python’s standard logging
@@ -10,4 +11,5 @@ from ianapp.realty.models import Base
 # get in our way; just click the “SQL” links to see what’s being generated.
 engine = create_engine(SQLALCHEMY_DATABASE_URI, echo=False)
 
-Base.metadata.create_all(engine)
+Base1.metadata.create_all(engine)
+Base2.metadata.create_all(engine)

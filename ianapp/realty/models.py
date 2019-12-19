@@ -1,10 +1,10 @@
 from sqlalchemy import Column, DateTime, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+Base2 = declarative_base()
 
 
-class Realty(Base):
+class Realty(Base2):
     __tablename__ = 'realty'
 
     id = Column(Integer, primary_key=True)
