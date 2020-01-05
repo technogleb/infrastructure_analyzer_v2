@@ -12,6 +12,8 @@ def pack_to_json(response_results_dict: dict):
     key это квадранты, а value полученные данные в виде json
     На вход получает словарь с результатами запросов
     """
+    # можно было проще
+    # return {square: response_obj.json() for square, response_obj in response_results_dict.items()}
     response_text_in_json = {}
     for square, response_obj in response_results_dict.items():
         response_text_in_json[square] = response_obj.json()
@@ -34,6 +36,7 @@ def save_realty_to_db(response_text_in_json: dict):
 
 def write_to_db(cian_id, cian_price, cian_lon, cian_lat, cian_added, date_of_record_in_the_database):
     """ Записывает построчно данные в таблицу realty"""
+    #  те же замечание про добавление в цикле и переиспользуемость кода, что и в модуле infrastructure
     new = Realty(
         cian_id=cian_id,
         cian_price=cian_price,

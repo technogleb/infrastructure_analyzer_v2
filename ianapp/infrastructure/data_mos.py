@@ -3,6 +3,7 @@ import requests
 from ianapp.config import DATASETS, DATA_MOS_API_KEY, USERAGENT_COOKIE
 from ianapp.infrastructure.utils import save_infrastructure_to_db
 
+
 def define_order_in_download_queue():
     """ Определяет в какой последовательности скачивать наборы данных.
 

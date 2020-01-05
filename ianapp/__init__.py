@@ -1,1 +1,1 @@
-import ianapp
+import ianapp  # зачем нужен этот импорт?

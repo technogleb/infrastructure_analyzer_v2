@@ -21,3 +21,6 @@ class Subway(Base1):
                         station_entry_name={self.station_entry_name},\
                         lon={self.lon},\
                         lat={self.lat})>'
+
+
+#  здесь все ок в принципе, так же как и в аналогичном модуле realty
